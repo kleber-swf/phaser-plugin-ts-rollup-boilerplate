@@ -2,6 +2,7 @@
 
 set -e
 
+# prompt for package name
 while : ; do
 	while [ -z $PACKAGE_NAME ]; do
 		read -e -p 'Project name (use kebab-case): ' PACKAGE_NAME
@@ -16,6 +17,7 @@ while : ; do
 	fi
 done
 
+# prompt for module name
 while : ; do
 	while [ -z $MODULE_NAME ]; do
 		read -e -p 'Module name (use PascalCase or camelCase): ' MODULE_NAME
@@ -30,6 +32,8 @@ while : ; do
 	fi
 done
 
+
+# update files
 FILES=( './package.json' './example/game.js' )
 
 for FILE in ${FILES[@]}; do
@@ -37,5 +41,13 @@ for FILE in ${FILES[@]}; do
 	sed -i -e 's/PhaserPluginTsRollupBoilerplate/'$MODULE_NAME'/g' $FILE
 done
 
+# install dependencies
 npm i
-# rm -f init.sh
+
+# cleanup
+rm -f init.sh
+
+# finish
+echo 
+echo 'Done'
+echo
