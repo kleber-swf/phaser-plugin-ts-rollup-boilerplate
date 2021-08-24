@@ -1,11 +1,34 @@
 {
-  "name": "phaser-anchored-layout",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/phaser-anchored-layout.js",
-  "scripts": {
-    "test": " "
-  },
-  "author": "Kleber Silva <kleber.swf@gmail.com>",
-  "license": "MIT"
+	"name": "phaser-plugin-ts-rollup-boilerplate",
+	"version": "1.0.0",
+	"description": "A boilerplate project for Phaser-CE plugin development using typescript and rollup",
+	"author": "Kleber Silva <kleber.swf@gmail.com>",
+	"main": "dist/phaser-plugin-ts-rollup-boilerplate.js",
+	"input": "src/index.ts",
+	"module": "PhaserPluginTsRollupBoilerplate",
+	"publishConfig": {
+		"access": "public"
+	},
+	"license": "MIT",
+	"scripts": {
+		"dev": "rollup -w -c ./config/rollup.config.dev.js",
+		"barrel": "barrelsby -c ./config/barrelsby.json",
+		"predev": "npm run barrel",
+		"example": "browser-sync start -c ./config/bs-config.js",
+		"build": "rollup -c ./config/rollup.config.js"
+	},
+	"dependencies": {
+		"phaser-ce": "^2.18.0"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^20.0.0",
+		"@rollup/plugin-node-resolve": "^13.0.4",
+		"@rollup/plugin-typescript": "^8.2.5",
+		"barrelsby": "^2.2.0",
+		"browser-sync": "^2.27.5",
+		"rollup": "^2.56.3",
+		"rollup-plugin-terser": "^7.0.2",
+		"tslib": "^2.3.1",
+		"typescript": "^4.3.5"
+	}
 }
