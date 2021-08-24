@@ -1,18 +1,22 @@
 {
-	"name": "phaser-anchored-layout",
+	"name": "phaser-plugin-ts-rollup-boilerplate",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A boilerplate project for Phaser-CE plugin development using typescript and rollup",
 	"author": "Kleber Silva <kleber.swf@gmail.com>",
-	"main": "dist/phaser-anchored-layout.js",
+	"main": "dist/phaser-plugin-ts-rollup-boilerplate.js",
 	"input": "src/index.ts",
-	"module": "PhaserAnchoredLayout",
+	"module": "PhaserPluginTsRollupBoilerplate",
+	"publishConfig": {
+		"access": "public"
+	},
+	"license": "MIT",
 	"scripts": {
 		"dev": "rollup -w -c ./config/rollup.config.dev.js",
 		"barrel": "barrelsby -c ./config/barrelsby.json",
 		"predev": "npm run barrel",
-		"example": "browser-sync start -c ./config/bs-config.js"
+		"example": "browser-sync start -c ./config/bs-config.js",
+		"build": "rollup -c ./config/rollup.config.js"
 	},
-	"license": "MIT",
 	"dependencies": {
 		"phaser-ce": "^2.18.0"
 	},

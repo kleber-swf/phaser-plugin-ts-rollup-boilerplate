@@ -12,7 +12,7 @@ function preload() {
 
 function create() {
 	// initializes the plugin
-	game.plugins.add(new PhaserAnchoredLayout.Plugin(game));
+	game.plugins.add(new PhaserPluginTsRollupBoilerplate.Plugin(game));
 
 	// just a dummy text
 	game.add.text(480, 270, 'This is a example', {
