@@ -1,0 +1,11 @@
+{
+  "name": "phaser-anchored-layout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/phaser-anchored-layout.js",
+  "scripts": {
+    "test": " "
+  },
+  "author": "Kleber Silva <kleber.swf@gmail.com>",
+  "license": "MIT"
+}
